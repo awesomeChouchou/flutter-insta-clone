@@ -19,7 +19,7 @@ class PostWidget extends StatefulWidget {
 }
 
 class _PostWidgetState extends State<PostWidget> {
-  bool isHeartClicked = false;
+//TODO:  bool형의 isHeartClicked 변수를 선언하세요
 
   @override
   Widget build(BuildContext context) {
@@ -83,22 +83,17 @@ class _PostWidgetState extends State<PostWidget> {
                   children: [
                     GestureDetector(
                       onTap: () {
-                        setState(() {
-                          isHeartClicked = !isHeartClicked;
-                        });
+                        //TODO: setState 함수를 이용해서 isHeartClicked를 토글하세요
                       },
                       child: Row(
                         children: [
                           Icon(
-                            isHeartClicked
-                                ? Icons.favorite
-                                : Icons.favorite_border,
+                            //TODO: isHeartClicked값에 따라 true라면 Icons.favorite을 false라면 Icons.favorite_border 아이콘을 나타내주세요
+                          
                             size: 32,
                           ).pOnly(right: 5),
-                          Text(isHeartClicked
-                                  ? '${postData[widget.index].likeCount + 1}'
-                                  : '${postData[widget.index].likeCount}')
-                              .pOnly(right: 10),
+                          //TODO: isHeartClicked값에 따라 true라면 postData의 likeCount에 +1을 하고 false라면 그대로 보여주세요
+                          //그리고 Text위젯의 오른쪽에 패딩을 10만큼 주세요
                         ],
                       ),
                     ),

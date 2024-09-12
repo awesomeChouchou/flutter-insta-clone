@@ -41,7 +41,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
           backgroundColor: Colors.white,
           title: SvgPicture.asset(
-            'asset/logo2.svg',
+            'asset/logo.svg',
             width: 100,
             height: 50,
           ),
@@ -69,20 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Container(
                     color: Colors.white,
                     child: Row(
-                      children: List.generate(storyData.length, (index) {
-                        return StoryWidget(
-                          index: index,
-                        ).pOnly(right: 10);
-                      }),
-                    ),
+                        //TODO: List.generate 함수를 이용해서 StoryWidget을 storyData.length만큼 그려주세요
+
+                        ),
                   ),
                 ),
               ),
               Column(
-                children: List.generate(postData.length, (index) {
-                  return PostWidget(index: index);
-                }),
-              ),
+                  // //TODO: List.generate 함수를 이용해서 PostWidget을 postData.length만큼 그려주세요
+
+                  ),
             ],
           ),
         ),

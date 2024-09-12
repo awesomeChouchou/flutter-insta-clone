@@ -27,7 +27,7 @@ class StoryWidget extends StatelessWidget {
                 Color(0xFFF77737),
                 Color(0xFFE1306C),
                 Color(0xFFC13584),
-                Color(0xFF833AB4), 
+                Color(0xFF833AB4),
               ],
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
@@ -35,18 +35,10 @@ class StoryWidget extends StatelessWidget {
           ),
           child: Center(
             child: Container(
-              width: context.deviceWidth * 0.21,
-              height: context.deviceWidth * 0.21,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage(
-                      'asset/picture${Random().nextInt(13) + 1}.jpg'), // Load random image from picture1.jpg to picture13.jpg
-                  fit: BoxFit.cover,
+                //TODO: 19라인의 컨테이너를 참고해서 asset/picture1~13까지의 사진을 인스타그램 스토리처럼 비슷하게 만들어주세요
+                // AI를 활용하셔도 좋습니다.
+
                 ),
-                border: Border.all(color: Colors.white, width: 2),
-              ),
-            ),
           ),
         ),
         Text(storyData[index].userId)
